@@ -1,5 +1,6 @@
 # Risk Of Random 2
 A random survivor selection tool for Risk of Rain 2.
+Available at https://ben.clegg.tech/riskofrandom2/
 
 ## License / Copyright
 All graphical assets are sourced from the Risk of Rain 2 Fan Wiki. 
