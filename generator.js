@@ -1,4 +1,4 @@
-var survivors = Array(
+const SURVIVORS = Array(
     { name: "Acrid", image: "acrid.png"},
     { name: "Artificer", image: "artificer.png"},
     { name: "Commando", image: "commando.png"},
@@ -10,7 +10,7 @@ var survivors = Array(
     { name: "REX", image: "rex.png"}
 );
 
-var backgrounds = Array(
+const BACKGROUNDS = Array(
     "acres.png",
     "aqueduct.png",
     "aspect.png",
@@ -21,14 +21,19 @@ var backgrounds = Array(
     "roost.png"
 );
 
-var chosenSurvivor = survivors[Math.floor(Math.random() * survivors.length)]
-var chosenBG = "assets/bg/" + backgrounds[Math.floor(Math.random() * backgrounds.length)]
+function generate() {
+    var chosenSurvivor = SURVIVORS[Math.floor(Math.random() * SURVIVORS.length)]
+    var chosenBG = "assets/bg/" + BACKGROUNDS[Math.floor(Math.random() * BACKGROUNDS.length)]
+    
+    var survivorImage = "assets/SURVIVORS/" + chosenSurvivor.image;
+    var contentReplacement = "" + chosenSurvivor.name + " <img src=\"" + survivorImage + "\" alt=\"" + chosenSurvivor.name + "\"/>";
+    
+    document.getElementById("survivor").innerHTML = contentReplacement;
+    
+    var body = document.getElementsByTagName('body')[0];
+    body.style.background = "url(" + chosenBG + ")" + "no-repeat center center fixed";
+    body.style.backgroundSize = "cover";
+}
 
-var survivorImage = "assets/survivors/" + chosenSurvivor.image;
-var contentReplacement = "" + chosenSurvivor.name + " <img src=\"" + survivorImage + "\" alt=\"" + chosenSurvivor.name + "\"/>";
-
-document.getElementById("survivor").innerHTML = contentReplacement;
-
-var body = document.getElementsByTagName('body')[0];
-body.style.background = "url(" + chosenBG + ")" + "no-repeat center center fixed";
-body.style.backgroundSize = "cover";
+window.onload = generate;
+document.getElementById("survivorPanel").onclick = generate;
