@@ -25,7 +25,7 @@ function generate() {
     var chosenSurvivor = SURVIVORS[Math.floor(Math.random() * SURVIVORS.length)]
     var chosenBG = "assets/bg/" + BACKGROUNDS[Math.floor(Math.random() * BACKGROUNDS.length)]
     
-    var survivorImage = "assets/SURVIVORS/" + chosenSurvivor.image;
+    var survivorImage = "assets/survivors/" + chosenSurvivor.image;
     var contentReplacement = "" + chosenSurvivor.name + " <img src=\"" + survivorImage + "\" alt=\"" + chosenSurvivor.name + "\"/>";
     
     document.getElementById("survivor").innerHTML = contentReplacement;
