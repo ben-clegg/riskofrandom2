@@ -1,13 +1,13 @@
 var survivors = Array(
-    { name: "Acrid"},
-    { name: "Artificer"},
-    { name: "Commando"},
-    { name: "Engineer"},
-    { name: "Huntress"},
-    { name: "Loader"},
-    { name: "Mercenary"},
-    { name: "MUL-T"},
-    { name: "REX"}
+    { name: "Acrid", image: "acrid.png"},
+    { name: "Artificer", image: "artificer.png"},
+    { name: "Commando", image: "commando.png"},
+    { name: "Engineer", image: "engineer.png"},
+    { name: "Huntress", image: "huntress.png"},
+    { name: "Loader", image: "loader.png"},
+    { name: "Mercenary", image: "mercenary.png"},
+    { name: "MUL-T", image: "mult.png"},
+    { name: "REX", image: "rex.png"}
 );
 
 var backgrounds = Array(
@@ -24,7 +24,10 @@ var backgrounds = Array(
 var chosenSurvivor = survivors[Math.floor(Math.random() * survivors.length)]
 var chosenBG = "assets/bg/" + backgrounds[Math.floor(Math.random() * backgrounds.length)]
 
-document.getElementById("survivor").innerHTML = chosenSurvivor.name;
+var survivorImage = "assets/survivors/" + chosenSurvivor.image;
+var contentReplacement = "" + chosenSurvivor.name + " <img src=\"" + survivorImage + "\" alt=\"" + chosenSurvivor.name + "\"/>";
+
+document.getElementById("survivor").innerHTML = contentReplacement;
 
 var body = document.getElementsByTagName('body')[0];
 body.style.background = "url(" + chosenBG + ")" + "no-repeat center center fixed";
