@@ -35,5 +35,9 @@ function generate() {
     body.style.backgroundSize = "cover";
 }
 
-window.onload = generate;
-document.getElementById("survivorPanel").onclick = generate;
+window.onload = function() {
+    generate();
+    document.getElementById("survivorPanel").addEventListener("click", function() {
+        generate();
+    });
+}
