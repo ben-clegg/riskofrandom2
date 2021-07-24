@@ -7,7 +7,9 @@ const SURVIVORS = Array(
     { name: "Loader", image: "loader.png"},
     { name: "Mercenary", image: "mercenary.png"},
     { name: "MUL-T", image: "mult.png"},
-    { name: "REX", image: "rex.png"}
+    { name: "REX", image: "rex.png"},
+    { name: "Bandit", image: "bandit.png"},
+    { name: "Captain", image: "captain.png"}
 );
 
 const BACKGROUNDS = Array(
@@ -37,7 +39,7 @@ function generate() {
 
 window.onload = function() {
     generate();
-    document.getElementById("survivorPanel").addEventListener("click", function() {
+    document.addEventListener("click", function() {
         generate();
     });
 }
