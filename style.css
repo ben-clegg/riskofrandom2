@@ -7,8 +7,6 @@ body {
 html, body {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    /*backdrop-filter: url(#blur);*/
-    -moz-backdrop-filter: url(#blur);
     height: 150%;
     min-height: 100%;
 }
