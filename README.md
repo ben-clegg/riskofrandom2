@@ -13,3 +13,5 @@ Please feel free to make forks of this software for additional features or to su
 
 Pull requests that improve the style of the webpage without reducing performance are welcome.
 
+## Known Issues
+The background is not blurred in Firefox, due to a lack of support in the browser. 

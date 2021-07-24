@@ -17,10 +17,18 @@ const BACKGROUNDS = Array(
     "aqueduct.png",
     "aspect.png",
     "call.png",
+    "coast.png",
+    "commencement.png",
     "delta.png",
     "depths.png",
+    "fields.png",
+    "fractured.png",
+    "grove.png",
+    "meadow.png",
     "plains.png",
-    "roost.png"
+    "roost.png",
+    "time.png",
+    "whole.png"
 );
 
 function generate() {
